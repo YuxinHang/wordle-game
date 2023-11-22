@@ -15,7 +15,7 @@ import PointCounter from '../PointCounter';
 
 const WordleGame: React.FC = () => {
     const [randomWord, setRandomWord] = useState(() => getRandomWord());
-    console.log(randomWord);
+    // console.log(randomWord);
 
     const [difficulty, setDifficulty] = useState<Difficulty>(Difficulty.NORMAL); // normal by default
     const [currentRow, setCurrentRow] = useState(0); // the current row of input
@@ -26,6 +26,7 @@ const WordleGame: React.FC = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     const numOfRows = getRowNumFromDifficulty(difficulty);
+    const songPath = `${process.env.PUBLIC_URL}/music/keys-of-moon-white-petals.mp3`;
 
     const [guessedInfo, setGuessedInfo] = useState<RowInfo[]>(() =>
         initializeGuessedInfo(numOfRows)
@@ -168,7 +169,7 @@ const WordleGame: React.FC = () => {
     return (
         <WordContext.Provider value={{ word: randomWord }}>
             <div className="WordleGame">
-                <MusicPlayer />
+                <MusicPlayer songPath={songPath} />
                 <PointCounter point={winningPoint} continuousPoint={continuousWinningPoint} />
                 <h1>Wordle Game</h1>
                 <button
