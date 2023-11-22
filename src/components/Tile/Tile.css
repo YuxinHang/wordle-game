@@ -1,0 +1,46 @@
+.Tile {
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+}
+
+.CorrectTile {
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+    background-color: lightgreen;
+}
+
+.CloseTile {
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+    background-color: yellow;
+}
+
+.IncorrectTile {
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+    background-color: lightgrey;
+}

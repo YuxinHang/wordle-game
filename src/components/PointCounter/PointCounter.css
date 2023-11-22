@@ -1,0 +1,9 @@
+.point-board {
+    position: fixed;
+    top: 10px; /* adjust as needed */
+    right: 10px; /* adjust as needed */
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}

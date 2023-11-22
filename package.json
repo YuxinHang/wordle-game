@@ -1,26 +1,36 @@
 {
   "name": "wordle",
   "version": "0.1.0",
+  "homepage": "https://YuxinHang.github.io/wordle-game",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "@types/jest": "^27.5.2",
-    "@types/node": "^16.18.64",
-    "@types/react": "^18.2.38",
-    "@types/react-dom": "^18.2.17",
+    "@types/node": "^16.18.62",
+    "@types/react": "^18.2.37",
+    "@types/react-dom": "^18.2.15",
     "react": "^18.2.0",
+    "react-audio-player": "^0.17.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
+    "react-spring": "^9.7.3",
+    "three": "^0.158.0",
     "typescript": "^4.9.5",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.1.0",
+    "prettier": "^2.3.0"
   },
   "eslintConfig": {
     "extends": [

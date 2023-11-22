@@ -1,0 +1,5 @@
+.TileRow {
+    display: flex;
+    gap: 10px;
+    margin: auto;
+}
