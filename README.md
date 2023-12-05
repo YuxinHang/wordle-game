@@ -1,48 +1,28 @@
-# Getting Started with Create React App
+# Wordle Game
 
+Welcome to my wordle game! This game is used to test your English vocabulary!
 My wordle game website: https://yuxinhang.github.io/wordle-game/.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![game image](/public/images/game_screenshot.png)
 
-## Available Scripts
+## Manual
 
-In the project directory, you can run:
+In this game, every round a 5-letter-long English word will be generated randomly. You goal is to find the word in several turns.
 
-### `npm start`
+In every turn (every row), you can guess the word by entering 5 letters. Then you can click Enter button. It will reveal the results of your guessing:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+1. For a letter which is exactly in that slot, the slot will become green;
+2. For a letter which is not in that slot but appears somewhere else in this word, the slot will become yellow;
+3. Otherwise the slot will keep grey.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+When you find the correct word, or you use up all your chances, a modal will pop up and show the result.
 
-### `npm test`
+## Interesting points
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+We integrated many interesting points to catch your eyes.
 
-### `npm run build`
+1. First, for this game, we have 3 modes of difficulties: easy mode, normal mode and hard mode. The number of guessing will change for different mode. We recommend beginners to try with normal mode first, and then change the difficulties.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. Second, we have a score board in the top right! You can find the total number of win and continuous win over there.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+3. We have a BGM at the top center! Enjoy your game as long as the music!
