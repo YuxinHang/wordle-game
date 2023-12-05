@@ -39,8 +39,10 @@ const WordleGame: React.FC = () => {
 
     useEffect(() => {
         // check if the game is over
+        let shouldEarlyBreak = false;
         guessedInfo.forEach((rowInfo) => {
             const currentString = rowInfo.guessedString.join('');
+            // console.log(currentString, randomWord, currentString === randomWord, rowInfo.isCompete)
             if (currentString === randomWord && rowInfo.isCompete) {
                 // win!
                 setIsOver(true);
@@ -48,10 +50,11 @@ const WordleGame: React.FC = () => {
                 setIsModalOpen(true);
                 setWinningPoint(winningPoint + 1);
                 setContinousWinningPoint(continuousWinningPoint + 1);
+                shouldEarlyBreak = true;
             }
             return;
         });
-        if (currentRow === numOfRows) {
+        if (!shouldEarlyBreak && currentRow === numOfRows) {
             // lose
             setIsOver(true);
             setWon(false);
